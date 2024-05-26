@@ -6,8 +6,8 @@ from tkinter import filedialog
 
 @dataclass
 class ModelArgs:
-    filename: str = 'C:\\Users\\meyer\\Documents\\Projects\\travnet\\models\\my_checkpoint16k.pth'
-    num_channels: int = 24
+    filename: str = 'C:\\Users\\meyer\\Documents\\Projects\\travnet\\models\\travnetCNN16k.pth'
+    num_channels: int = 1
     sample_rate: int = 30000
     threshold: int = -9
 

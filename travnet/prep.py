@@ -10,7 +10,7 @@ from sklearn.decomposition import PCA
 class DataArgs:
     filename: str = None
     path: str = None
-    num_channels: int = 24
+    num_channels: int = 1
     sample_rate: int = 30000
     threshold: int = -8
 
