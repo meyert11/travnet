@@ -24,7 +24,7 @@ You can follow the steps below to quickly get up and running with TravNet models
     ```bash
     python3 download_samples.py
     ```
-4. Once the model weights are data are available you can run the model using the command below:
+4. Once the model weights and data are available you can run the model using the command below:
     ```bash
     python3 example_sorter.py
     ```
