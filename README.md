@@ -2,6 +2,9 @@
   <img src="https://github.com/neurodynamics-ai/travnet/blob/main/TravNet.repo.jpg" width="400"/>
 </p>
 
+<p align="center">
+        🤗 <a href="https://huggingface.co/neurodynamics-ai"> Models on Hugging Face</a>&nbsp 
+<br>
 
 # Introducing TravNet
  
