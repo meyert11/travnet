@@ -13,7 +13,7 @@ You can follow the steps below to quickly get up and running with TravNet models
 
 1. Create a conda env
 
-2. In the top=level directory run:
+2. In the top-level directory run:
     ```bash
     pip install -e .
     ```
