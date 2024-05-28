@@ -91,7 +91,7 @@ class Prep:
         #TODO progress bar doesn't account for the fact that the index is not incremented for every iteration
         with tqdm(total=total_iterations, desc="Sorting Waveforms") as pbar:
             # Remove 32 datapoints from the filtered_data if the waveform drops below the threshold
-            index = 0
+            index = 8
             lastwf = -24 # index for where to start on the first potential waveform
             while index < len(below_threshold_indices):                
                 if index > lastwf:
@@ -100,7 +100,7 @@ class Prep:
                         s_index = np.argmin(signal[index:index+32])    
                         index = index + s_index                        
                         waveforms = np.append(waveforms, signal[index-8:index+24])
-                        timestamps = np.append(timestamps, index)
+                        timestamps = np.append(timestamps, index)                        
                         lastwf = index + 24
                         
                 

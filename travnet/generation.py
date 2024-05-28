@@ -1,13 +1,13 @@
 
-import numpy as np
 import time
-from tqdm import tqdm
-from tkinter import filedialog
 import torch
+import numpy as np
+import pandas as pd
+
 from torch.utils.data import DataLoader
 
-from .prep import Prep, DataArgs
-from .model import CNN, ModelArgs
+from .prep import Prep
+from .model import CNN
 
 
 class TravNet:
@@ -59,3 +59,17 @@ class TravNet:
 
         outputs = torch.cat(outputs)
         return outputs
+    
+    def process_outputs(outputs, timestamps, pc1, pc2):
+        # Find the argmax of outputs and call it clusters
+        clusters = np.argmax(outputs, axis=1).cpu().numpy()
+
+        # Create a DataFrame with clusters, timestamps, pc1, and pc2 as columns
+        df = pd.DataFrame({
+            'clusters': clusters,
+            'timestamps': timestamps,
+            'pc1': pc1,
+            'pc2': pc2
+        })
+
+        return df
